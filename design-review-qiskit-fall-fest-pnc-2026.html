@@ -1,0 +1,171 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Design Review — Qiskit Fall Fest PNC 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.6; background: #ffffff; color: #1f2328; max-width: 760px; margin: 0 auto; padding: 32px 24px 48px; }
+  h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .meta { color: #57606a; font-size: 13px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid #e5e7eb; }
+  h2 { font-size: 15px; font-weight: 700; margin: 32px 0 12px; color: #1f2328; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+  h3 { font-size: 13px; font-weight: 700; margin: 20px 0 6px; color: #1f2328; }
+  p { color: #1f2328; margin-bottom: 8px; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; margin-right: 6px; vertical-align: middle; }
+  .critical { background: #fee2e2; color: #b91c1c; }
+  .high { background: #fef3c7; color: #92400e; }
+  .medium { background: #dbeafe; color: #1d4ed8; }
+  .low { background: #f0fdf4; color: #15803d; }
+  .done { background: #f0fdf4; color: #15803d; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 13px; }
+  th { text-align: left; padding: 8px 10px; background: #f7f8fa; border: 1px solid #e5e7eb; font-weight: 600; color: #57606a; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  td { padding: 8px 10px; border: 1px solid #e5e7eb; vertical-align: top; }
+  tr:hover td { background: #f7f8fa; }
+  .score-row { display: flex; gap: 12px; margin: 16px 0 28px; flex-wrap: wrap; }
+  .score-card { flex: 1; min-width: 130px; background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 16px; text-align: center; }
+  .score-card .num { font-size: 28px; font-weight: 700; line-height: 1.1; }
+  .score-card .label { font-size: 11px; color: #57606a; margin-top: 2px; }
+  .green { color: #16a34a; }
+  .amber { color: #d97706; }
+  .red { color: #dc2626; }
+  .section-block { background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+  .section-block .title { font-weight: 700; font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .section-block ul { padding-left: 18px; color: #1f2328; }
+  .section-block ul li { margin-bottom: 4px; font-size: 13px; }
+  .priority-list { counter-reset: item; list-style: none; padding: 0; }
+  .priority-list li { counter-increment: item; display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e5e7eb; font-size: 13px; }
+  .priority-list li:last-child { border-bottom: none; }
+  .priority-list li::before { content: counter(item); background: #3b82d4; color: white; font-weight: 700; font-size: 11px; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .priority-list li .item-body strong { display: block; margin-bottom: 2px; }
+  .priority-list li .item-body span { color: #57606a; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 12px; color: #57606a; }
+</style>
+</head>
+<body>
+
+<h1>Design Review — Qiskit Fall Fest PNC 2026</h1>
+<p class="meta">Professional UI/UX audit  ·  September 2025  ·  Reviewed all 13 components</p>
+
+
+<div class="score-row">
+  <div class="score-card"><div class="num amber">6.5</div><div class="label">Overall Design /10</div></div>
+  <div class="score-card"><div class="num green">8</div><div class="label">Mobile Ready /10</div></div>
+  <div class="score-card"><div class="num amber">6</div><div class="label">Visual Hierarchy /10</div></div>
+  <div class="score-card"><div class="num amber">7</div><div class="label">Content Clarity /10</div></div>
+  <div class="score-card"><div class="num green">9</div><div class="label">Consistency /10</div></div>
+</div>
+
+<h2>✅ What's Working Well</h2>
+<table>
+  <tr><th>Area</th><th>Observation</th></tr>
+  <tr><td>Color consistency</td><td>Unified <code>indigo-300</code> headings, <code>gray-900/800</code> alternating sections — clean and intentional</td></tr>
+  <tr><td>Mobile nav</td><td>Hamburger menu animates correctly, closes on link tap — good UX</td></tr>
+  <tr><td>Partners section</td><td>Responsive flex — stacks on mobile, side-by-side on desktop</td></tr>
+  <tr><td>Register section</td><td>Now shows seat count, deadline, and dates — strong CTA context</td></tr>
+  <tr><td>Schedule accordion</td><td>Clean expandable rows — avoids overwhelming the user</td></tr>
+  <tr><td>FAQ cards</td><td>Now visibly distinct from section background after <code>gray-700</code> fix</td></tr>
+</table>
+
+<h2>🔴 Critical Issues</h2>
+
+<div class="section-block">
+  <div class="title"><span class="badge critical">Critical</span> Hero section has no minimum height — feels cramped on large screens</div>
+  <ul>
+    <li>The hero only uses <code>py-20</code> padding. On wide/tall screens it looks tiny compared to the content below.</li>
+    <li><strong>Fix:</strong> Add <code>min-h-[60vh]</code> and <code>flex flex-col justify-center</code> to make it fill the viewport properly.</li>
+  </ul>
+</div>
+
+<div class="section-block">
+  <div class="title"><span class="badge critical">Critical</span> About section is a wall of text — no visual breathing room</div>
+  <ul>
+    <li>One long <code>&lt;p&gt;</code> tag with <code>&lt;br/&gt;&lt;br/&gt;</code> for spacing. Looks like a raw text dump, not a designed section.</li>
+    <li>The daily schedule inside About duplicates the Schedule section below — confusing for visitors.</li>
+    <li><strong>Fix:</strong> Split into proper paragraphs with margin. Remove the day-by-day list from About — it already exists in Schedule.</li>
+  </ul>
+</div>
+
+<div class="section-block">
+  <div class="title"><span class="badge critical">Critical</span> No visual dividers between sections — page bleeds together</div>
+  <ul>
+    <li>All sections share <code>max-w-4xl mx-auto</code> but Partners uses full-width <code>bg-gray-800</code> — creates jarring width inconsistency.</li>
+    <li>On desktop, sections bleed into each other with no clear boundary at the edges.</li>
+    <li><strong>Fix:</strong> Either make all sections full-width with centered inner content, or add a consistent border/divider between them.</li>
+  </ul>
+</div>
+
+<h2>🟡 High Priority Improvements</h2>
+
+<div class="section-block">
+  <div class="title"><span class="badge high">High</span> WhyJoin uses a plain bullet list — lowest-effort section on the page</div>
+  <ul>
+    <li>7 plain <code>&lt;li&gt;</code> items with no visual treatment. Every other event page uses icon cards or a 2-column grid for this.</li>
+    <li><strong>Fix:</strong> Use a 2-column grid of cards, each with a small emoji/icon, title, and one line of text.</li>
+  </ul>
+</div>
+
+<div class="section-block">
+  <div class="title"><span class="badge high">High</span> Speaker section has no session time or topic listed</div>
+  <ul>
+    <li>The speaker card shows name, role, and bio — but doesn't say <em>when</em> the session is or <em>what topic</em> will be covered.</li>
+    <li>Visitors want to know: "What will I learn and when?"</li>
+    <li><strong>Fix:</strong> Add session date (e.g. Nov 26), time, and topic below the bio.</li>
+  </ul>
+</div>
+
+<div class="section-block">
+  <div class="title"><span class="badge high">High</span> Navbar "Register" link is not visually distinct on desktop</div>
+  <ul>
+    <li>On desktop, "Register" looks identical to "Contact" — same unstyled text. On mobile it's yellow (good!) but on desktop it blends in.</li>
+    <li><strong>Fix:</strong> Style the desktop Register link as a small yellow pill button — same as the Hero CTA.</li>
+  </ul>
+</div>
+
+<div class="section-block">
+  <div class="title"><span class="badge high">High</span> Footer is too minimal — no links, no social icons</div>
+  <ul>
+    <li>Just one line of copyright text. A professional event footer should have quick links and social media icons.</li>
+    <li><strong>Fix:</strong> Add 3–4 quick nav links and social icons (email, LinkedIn, Facebook) in the footer.</li>
+  </ul>
+</div>
+
+<h2>🔵 Medium — Polish</h2>
+
+<table>
+  <tr><th>Area</th><th>Issue</th><th>Fix</th></tr>
+  <tr><td>Schedule accordion</td><td>No open/close indicator — user doesn't know it's expandable</td><td>Add a <code>▾</code> / <code>▴</code> arrow that rotates on open</td></tr>
+  <tr><td>Venue map</td><td><code>h-64</code> is only 256px — very small map, hard to read</td><td>Increase to <code>h-80</code> or <code>h-96</code></td></tr>
+  <tr><td>Contact section</td><td>Contact links are plain text with emojis — no visual card treatment</td><td>Wrap each link in a small bordered card with icon + label</td></tr>
+  <tr><td>Countdown</td><td>Countdown only shows days — no hours/minutes. Feels low-effort.</td><td>Add hours and minutes for urgency</td></tr>
+  <tr><td>Sponsors section</td><td>Very sparse — just 3 lines of text and a link. Looks unfinished.</td><td>Add a "sponsorship tiers" visual or at minimum a styled CTA card</td></tr>
+  <tr><td>Page title font</td><td><code>Arial</code> is set in globals.css — but Geist font is loaded. Arial feels generic.</td><td>Remove Arial override, let Geist render as intended</td></tr>
+</table>
+
+<h2>🟢 Low — Nice to Have</h2>
+<ul class="priority-list">
+  <li><div class="item-body"><strong>Open Graph / Social preview tags</strong><span>When someone shares your Vercel URL on WhatsApp or Twitter, it shows a blank preview. Add og:title, og:description, og:image in layout.tsx.</span></div></li>
+  <li><div class="item-body"><strong>Favicon is a generic Next.js icon</strong><span>public/favicon.svg is the default Next.js globe. Replace with the Qiskit badge or your own icon.</span></div></li>
+  <li><div class="item-body"><strong>No scroll-to-top button</strong><span>Page is long. A small fixed "↑" button in the bottom-right corner significantly improves UX on mobile.</span></div></li>
+  <li><div class="item-body"><strong>Schedule details start with a leading space</strong><span>Each details string starts with " Kick-off Day\n..." — the leading space causes slight misalignment in the rendered text.</span></div></li>
+  <li><div class="item-body"><strong>No loading state on map iframe</strong><span>The Google Maps iframe has no placeholder — shows blank white while loading, which breaks the dark theme.</span></div></li>
+</ul>
+
+<h2>🏁 Recommended Fix Order</h2>
+<table>
+  <tr><th>#</th><th>What</th><th>Impact</th><th>Effort</th></tr>
+  <tr><td>1</td><td>Rewrite About section — remove text wall + remove duplicate schedule</td><td>High</td><td>Low</td></tr>
+  <tr><td>2</td><td>Hero min-height + flex centering</td><td>High</td><td>Very Low</td></tr>
+  <tr><td>3</td><td>Desktop Navbar Register button → yellow pill</td><td>High</td><td>Very Low</td></tr>
+  <tr><td>4</td><td>WhyJoin → icon cards grid</td><td>High</td><td>Medium</td></tr>
+  <tr><td>5</td><td>Speaker section → add session date + topic</td><td>Medium</td><td>Low</td></tr>
+  <tr><td>6</td><td>Footer → add links + social icons</td><td>Medium</td><td>Low</td></tr>
+  <tr><td>7</td><td>Fix Arial font override in globals.css</td><td>Medium</td><td>Very Low</td></tr>
+  <tr><td>8</td><td>Venue map height → h-96</td><td>Low</td><td>Very Low</td></tr>
+  <tr><td>9</td><td>Add Open Graph tags</td><td>Medium</td><td>Low</td></tr>
+  <tr><td>10</td><td>Replace favicon</td><td>Low</td><td>Low</td></tr>
+</table>
+
+<footer>Made with IBM Bob</footer>
+</body>
+</html>
