@@ -13,7 +13,7 @@ export default function Register() {
         Registration closes on <strong className="text-white">November 20, 2026 at 8:00 PM NPT</strong>.
       </p>
       <a
-        href="https://forms.gle/Ma3GKAaRjX2uagQL7"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeu35oR9W_1fyfKSbRLx0sac1Yk1tWZTvH0mhlNpmBVWpH99w/viewform?usp=publish-editor"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-yellow-400 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 text-black text-lg"
