@@ -11,7 +11,7 @@ export default function Speakers() {
         />
         <h4 className="text-xl font-semibold text-white mb-1">Unique Dhakal</h4>
         <p className="text-purple-300 mb-3 text-sm">
-          Aspiring Quantum Researcher | Quantum Excellence — QGSS-2026, IBM<br />
+          Aspiring Quantum Researcher, Quantum Excellence at QGSS-2026, IBM<br />
           Event Lead, Qiskit Fall Fest PNC 2026
         </p>
         <p className="text-gray-300 max-w-md mb-4">
@@ -19,8 +19,8 @@ export default function Speakers() {
           His sessions blend technical clarity with inspiring stories from the frontier of quantum research.
         </p>
         <div className="bg-gray-700 border border-gray-600 rounded-lg px-6 py-3 text-sm text-center">
-          <p className="text-indigo-300 font-semibold">📅 Session: Nov 26 &nbsp;·&nbsp; 7:00 PM – 8:00 PM NPT</p>
-          <p className="text-gray-300 mt-1">Topic: Quantum Computing & Qiskit — From Zero to Circuit</p>
+          <p className="text-indigo-300 font-semibold">Session: Nov 26, 7:00 PM to 8:00 PM NPT</p>
+          <p className="text-gray-300 mt-1">Topic: Quantum Computing and Qiskit, From Zero to Circuit</p>
         </div>
       </div>
     </section>

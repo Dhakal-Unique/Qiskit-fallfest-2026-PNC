@@ -7,7 +7,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="text-white font-bold text-lg mb-2">Qiskit Fall Fest PNC 2026</p>
-            <p className="text-gray-400 text-sm">Nov 25 – Dec 2, 2026<br />Prithvi Narayan Campus, Pokhara</p>
+            <p className="text-gray-400 text-sm">Nov 25 to Dec 2, 2026<br />Prithvi Narayan Campus, Pokhara</p>
           </div>
 
           {/* Quick Links */}
@@ -28,17 +28,17 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="mailto:fallfest.pnc2025@gmail.com" className="text-gray-400 hover:text-white transition-colors">
-                  📧 Email Us
+                  Email Us
                 </a>
               </li>
               <li>
                 <a href="https://np.linkedin.com/in/unique-dhakal-82b731178" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                  🔗 LinkedIn
+                  LinkedIn
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/profile.php?id=61580707090300" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                  📘 Facebook
+                  Facebook
                 </a>
               </li>
             </ul>

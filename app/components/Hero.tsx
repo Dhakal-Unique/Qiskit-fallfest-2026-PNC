@@ -14,7 +14,7 @@ export default function Hero() {
         Qiskit Fall Fest PNC 2026
       </h2>
       <p className="text-lg md:text-xl mb-4 text-white font-medium">
-        Open to All • Nov 25 - Dec 2
+        Open to All, Nov 25 to Dec 2
       </p>
       <p className="text-base md:text-lg mb-6 text-indigo-100">
         In collaboration with IBM Quantum and Prithvi Narayan Campus
