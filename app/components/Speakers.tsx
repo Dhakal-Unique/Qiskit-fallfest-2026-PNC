@@ -5,7 +5,7 @@ export default function Speakers() {
 
       <div className="flex flex-col items-center">
         <img
-          src="/images/OIP.png"
+          src="/images/OIP.jpg"
           alt="Unique Dhakal"
           className="w-40 h-40 rounded-full object-cover mb-4 border-4 border-purple-300"
         />
