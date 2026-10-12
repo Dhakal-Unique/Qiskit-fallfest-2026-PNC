@@ -14,6 +14,20 @@ export default function Speakers() {
           Aspiring Quantum Researcher, Quantum Excellence at QGSS-2026, IBM<br />
           Event Lead, Qiskit Fall Fest PNC 2026
         </p>
+        <div className="flex flex-wrap justify-center gap-2 mb-3">
+          <span className="bg-indigo-900 text-indigo-300 text-xs px-3 py-1 rounded-full border border-indigo-600">
+            Mentor · Qiskit Global Summer School 2026, IBM
+          </span>
+          <span className="bg-purple-900 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-600">
+            Instructor · Qiskit Fall Fest PNC 2025
+          </span>
+          <span className="bg-blue-900 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-600">
+            Section Leader · Code in Place, Stanford
+          </span>
+          <span className="bg-pink-900 text-pink-300 text-xs px-3 py-1 rounded-full border border-pink-600">
+            Qiskit Advocate
+          </span>
+        </div>
         <p className="text-gray-300 max-w-md mb-4">
           Mr. Dhakal brings deep insights into quantum computing and its real-world applications.
           His sessions blend technical clarity with inspiring stories from the frontier of quantum research.
