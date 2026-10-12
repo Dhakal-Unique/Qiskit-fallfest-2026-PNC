@@ -7,7 +7,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="text-white font-bold text-lg mb-2">Qiskit Fall Fest PNC 2026</p>
-            <p className="text-gray-400 text-sm">Nov 25 – Dec 1, 2026<br />Prithvi Narayan Campus, Pokhara</p>
+            <p className="text-gray-400 text-sm">Nov 25 – Dec 2, 2026<br />Prithvi Narayan Campus, Pokhara</p>
           </div>
 
           {/* Quick Links */}
