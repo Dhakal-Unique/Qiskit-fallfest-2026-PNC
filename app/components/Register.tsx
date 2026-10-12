@@ -3,7 +3,7 @@ export default function Register() {
     <section id="register" className="scroll-mt-24 px-6 py-16 max-w-4xl mx-auto text-center bg-gray-900">
       <h3 className="text-2xl font-bold mb-4 text-indigo-300">Register</h3>
       <p className="text-gray-300 mb-2 text-lg">
-        Join us for <strong className="text-white">Qiskit Fall Fest PNC 2026</strong> - November 25 to December 1
+        Join us for <strong className="text-white">Qiskit Fall Fest PNC 2026</strong> - November 25 to December 2
       </p>
       <p className="text-gray-300 mb-6">
         Limited seats available -{" "}
