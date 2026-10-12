@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col justify-center items-center text-center min-h-[60vh] py-20 px-6 bg-gradient-to-br from-indigo-800 to-purple-600">
       <img
-        src="/images/Badge_01.svg"
+        src="/images/Badge-01.png"
         alt="Qiskit Fall Fest Badge"
         width={128}
         height={128}
