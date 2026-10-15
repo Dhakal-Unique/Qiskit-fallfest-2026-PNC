@@ -27,7 +27,7 @@ export default function Footer() {
             <p className="text-indigo-300 font-semibold mb-3 text-sm uppercase tracking-wider">Connect</p>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="mailto:fallfest.pnc2025@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+                <a href="mailto:fallfest.pnc2026@gmail.com" className="text-gray-400 hover:text-white transition-colors">
                   Email Us
                 </a>
               </li>

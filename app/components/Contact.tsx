@@ -9,7 +9,7 @@ export default function Contact() {
         <li>
           📧{" "}
           <a
-            href="mailto:fallfest.pnc2025@gmail.com"
+            href="mailto:fallfest.pnc2026@gmail.com"
             className="text-purple-400 hover:underline font-semibold"
           >
             Email Us
