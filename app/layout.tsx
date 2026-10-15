@@ -21,7 +21,8 @@ export const metadata: Metadata = {
     description: "Join us for a quantum computing event at Prithvi Narayan Campus, Pokhara. Nov 25 to Dec 2, 2026.",
     url: "https://qiskitfallfest-pnc2026.vercel.app",
     siteName: "Qiskit Fall Fest PNC 2026",
-    images: [{ url: "/images/Badge_01.svg", width: 128, height: 128, alt: "Qiskit Fall Fest PNC 2026 Badge" }],
+    images: [{ url: "/images/Badge_01.png", width: 128, height: 128, alt: "Qiskit Fall Fest PNC 2026 Badge" }],
+    
     type: "website",
   },
   twitter: {
