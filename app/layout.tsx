@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://qiskitfallfest-pnc2026.vercel.app"),
+  icons: {
+    icon: "/images/Badge-01.png",
+  },
   title: "Qiskit Fall Fest PNC 2026",
   description: "Beginner-friendly quantum computing event hosted at Prithvi Narayan Campus, Pokhara. Nov 25 to Dec 2, 2026.",
   openGraph: {
