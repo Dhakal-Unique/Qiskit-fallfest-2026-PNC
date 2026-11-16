@@ -5,7 +5,7 @@ export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState<{ days: number; hours: number; minutes: number } | null>(null);
 
   useEffect(() => {
-    const targetDate = new Date("2026-11-20T20:00:00+05:45");
+    const targetDate = new Date("2026-11-22T20:00:00+05:45");
 
     const update = () => {
       const diff = targetDate.getTime() - new Date().getTime();
